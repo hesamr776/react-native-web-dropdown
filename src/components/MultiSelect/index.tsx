@@ -32,7 +32,6 @@ import CInput from '../TextInput';
 import { MultiSelectProps } from './model';
 import { styles } from './styles';
 
-
 const ic_down = require('../../assets/down.png');
 const statusBarHeight: number = StatusBar.currentHeight || 0;
 
@@ -174,7 +173,7 @@ const MultiSelectComponent: <T>(
     const _measure = useCallback(() => {
       if (ref && ref?.current) {
         ref.current.measureInWindow((pageX, pageY, width, height) => {
-          const isFull = mode === 'modal'
+          const isFull = mode === 'modal';
           const top = isFull ? 20 : height + pageY + 2;
           const bottom = H - top + height;
           const left = I18nManager.isRTL ? W - width - pageX : pageX;
@@ -189,7 +188,7 @@ const MultiSelectComponent: <T>(
           });
         });
       }
-    }, [H, W, orientation, mode]);
+    }, [H, W, mode]);
 
     const onKeyboardDidShow = useCallback(
       (e: KeyboardEvent) => {
