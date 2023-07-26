@@ -50,13 +50,13 @@
     "select",
     "select country"
   ],
-  "repository": "https://github.com/hesamr76/react-native-web-dropdown",
+  "repository": "https://github.com/hesamr776/react-native-web-dropdown",
   "author": "Hesam Rajaei <hesamr76@gmail.com> (https://github.com/hesamr76)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hesamr76/react-native-web-dropdown/issues"
+    "url": "https://github.com/hesamr776/react-native-web-dropdown/issues"
   },
-  "homepage": "https://github.com/hesamr76/react-native-web-dropdown#readme",
+  "homepage": "https://github.com/hesamr776/react-native-web-dropdown#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
