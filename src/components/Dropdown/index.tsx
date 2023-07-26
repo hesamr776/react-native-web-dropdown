@@ -166,9 +166,7 @@ const DropdownComponent: <T>(
     const _measure = useCallback(() => {
       if (ref && ref?.current) {
         ref.current.measureInWindow((pageX, pageY, width, height) => {
-          const isFull = isTablet
-            ? false
-            : mode === 'modal' || orientation === 'LANDSCAPE';
+          const isFull = mode === 'modal'
           const top = isFull ? 20 : height + pageY + 2;
           const bottom = H - top + height;
           const left = I18nManager.isRTL ? W - width - pageX : pageX;

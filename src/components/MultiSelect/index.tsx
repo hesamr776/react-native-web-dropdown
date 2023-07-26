@@ -26,13 +26,13 @@ import {
   ViewStyle,
   StatusBar,
 } from 'react-native';
-import { useDetectDevice } from '../../toolkits';
+
 import { useDeviceOrientation } from '../../useDeviceOrientation';
 import CInput from '../TextInput';
 import { MultiSelectProps } from './model';
 import { styles } from './styles';
 
-const { isTablet } = useDetectDevice;
+
 const ic_down = require('../../assets/down.png');
 const statusBarHeight: number = StatusBar.currentHeight || 0;
 
@@ -174,9 +174,7 @@ const MultiSelectComponent: <T>(
     const _measure = useCallback(() => {
       if (ref && ref?.current) {
         ref.current.measureInWindow((pageX, pageY, width, height) => {
-          const isFull = isTablet
-            ? false
-            : mode === 'modal' || orientation === 'LANDSCAPE';
+          const isFull = mode === 'modal'
           const top = isFull ? 20 : height + pageY + 2;
           const bottom = H - top + height;
           const left = I18nManager.isRTL ? W - width - pageX : pageX;
